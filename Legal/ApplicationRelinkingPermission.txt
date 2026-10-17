@@ -1,0 +1,13 @@
+GCodeReader CNC — application rights and relinking permission
+
+The original GCodeReader application code and assets are proprietary. All rights reserved except for the permissions below, rights granted by applicable law, and rights under the licenses of third-party components.
+
+The application source code is not included in the LGPL compliance materials.
+
+You may copy the supplied application object files and resources as needed to modify the application for your own use, relink it with modified LGPL libraries, and run the resulting application on devices you own or control. Reverse engineering for debugging such modifications is permitted. This permission requires no additional payment or approval.
+
+This permission does not grant a right to redistribute, sell, sublicense, rebrand, or incorporate the proprietary application code or assets into another product. Any use beyond the permissions above requires separate authorization from the applicable application copyright holders, unless permitted by law.
+
+These limitations apply only to proprietary application material. They do not restrict rights granted by GNU LGPL 2.1, the Open CASCADE Exception, MIT, BSD or other applicable licenses in third-party components. Third-party libraries may be copied, modified and redistributed under their own licenses.
+
+The relinking materials are provided without warranty, to the extent permitted by law. Apple's SDKs, signing tools, operating systems and their respective terms are supplied separately by Apple. You use your own development signing identity; no publisher signing keys are supplied.

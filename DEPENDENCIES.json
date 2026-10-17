@@ -1,0 +1,24 @@
+{
+  "OCCT": {
+    "version": "8.0.0",
+    "upstream": "https://github.com/Open-Cascade-SAS/OCCT",
+    "revision": "d3056ef80c9668f395da40f5fd7be186cae4501f",
+    "license": "LGPL-2.1-only WITH OCCT-exception-1.0",
+    "patch": "OCCTSwift/Scripts/patches/0001-BRepFill_CompatibleWires-guard-polar-iterator.patch",
+    "configuration": "iOS arm64, device and simulator, deployment target 26.0; optional third-party integrations disabled"
+  },
+  "OCCTSwift": {
+    "version": "1.5.2",
+    "upstream": "https://github.com/gsdali/OCCTSwift",
+    "revision": "b222ca1d88cc962b78cbcdd1da8db0bb3ab28701",
+    "license": "LGPL-2.1",
+    "changes": "Local source-matched binary dependency in Package.swift; library API sources unchanged"
+  },
+  "OCCTSwiftIO": {
+    "version": "1.0.0",
+    "upstream": "https://github.com/gsdali/OCCTSwiftIO",
+    "revision": "ef7a4ad2d9c057968cda24f08122534e54980f50",
+    "license": "LGPL-2.1",
+    "changes": "Local dependency in Package.swift; library API sources unchanged"
+  }
+}
