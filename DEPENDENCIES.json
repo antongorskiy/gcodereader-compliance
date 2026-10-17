@@ -12,7 +12,7 @@
     "upstream": "https://github.com/gsdali/OCCTSwift",
     "revision": "b222ca1d88cc962b78cbcdd1da8db0bb3ab28701",
     "license": "LGPL-2.1",
-    "changes": "Local source-matched binary dependency in Package.swift; library API sources unchanged"
+    "changes": "Local source-matched binary dependency in Package.swift; OCCTBridge_IO.mm guards unavailable optional glTF APIs"
   },
   "OCCTSwiftIO": {
     "version": "1.0.0",

@@ -1,0 +1,25 @@
+GCodeReader CNC 1.0.1 (16) — validation performed on 2026-10-17
+
+Xcode 27.0 (27A266a), iOS 27 SDK, arm64, deployment target iOS 26.0.
+
+1. OCCT 8.0.0 was rebuilt for device and simulator from the supplied pinned
+   source with the documented patch and configuration.
+2. The Release iOS archive and Release Simulator application built successfully.
+   The signed archive passed codesign verification.
+3. STEP, IGES and BREP import tests passed: 3 tests, zero failures. Each test
+   checks a generated 10 x 20 x 30 mm solid, nonempty geometry and bounds.
+4. Both device and simulator applications were successfully relinked solely
+   from the supplied application objects, resources and LGPL libraries.
+5. The Simulator application was installed and launched after relinking.
+6. The supplied wrapper source was modified to print a marker in shadedMesh,
+   independently rebuilt, and relinked with the application objects. Loading
+   the STEP fixture emitted the marker at runtime. The published source and
+   library objects were then restored to their original release contents.
+7. The filtered OCCT source package configured successfully for both SDKs.
+8. The package audit verifies hashes and excludes application source code,
+   private CAD fixtures and publisher signing credentials. Application objects
+   are stripped of DWARF and embedded LLVM sections before publication.
+
+Device relinking was verified with an ad-hoc signature for inspection.
+Physical-device installation using a recipient's credentials and runtime
+behavior on Apple Silicon Macs have not been verified by this procedure.
