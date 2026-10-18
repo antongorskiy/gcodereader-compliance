@@ -3,9 +3,9 @@ GCodeReader CNC — license notices and compliance materials
 This repository contains legal documents and downloadable LGPL compliance
 packages. It does not contain the source code of the GCodeReader application.
 
-Current build: 1.0.1 (17)
+Current build: 1.0.1 (18)
 Download and instructions:
-https://github.com/antongorskiy/gcodereader-compliance/releases/tag/app-1.0.1-17
+https://github.com/antongorskiy/gcodereader-compliance/releases/tag/app-1.0.1-18
 
 Open CASCADE Technology 8.0.0, OCCTSwift 1.5.2 and OCCTSwiftIO 1.0.0 are
 provided under their respective LGPL terms. Exact upstream revisions and

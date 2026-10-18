@@ -1,32 +1,32 @@
-GCodeReader CNC 1.0.1 (17) — validation completed on 2026-10-18
+GCodeReader CNC 1.0.1 (18) — validation completed on 2026-10-18
 
-Release artifacts: Xcode 27.0 (27A266a), iOS 27 SDK, arm64,
-deployment target iOS 26.0. The dependency revisions and library sources
-are unchanged from build 16; this package contains the matching build 17
-application objects and resources.
+Release artifacts: Xcode 27.1 (27A9275), iOS 27.1 SDK, arm64,
+deployment target iOS 26.0. The library source files are unchanged from
+build 17. This package contains build 18 application objects and resources.
 
-1. The signed Release iOS archive and Release Simulator application built
-   successfully. The archive passed strict codesign verification, and its
-   executable SHA-256 matches BuildIdentity.json in this package.
-2. STEP, IGES and BREP import tests passed after the reader fixes: 3 tests,
-   zero failures. Each checks a generated 10 x 20 x 30 mm solid, nonempty
-   geometry and bounds. The later compact toolbar layout was checked visually
-   in the final Release iPhone application; the iPad layout was also checked.
-3. Reader regression checks executed 57 tests with five documented fixture
-   skips and zero failures. A separate read-only SLDPRT corpus check opened
-   65 of 65 files with source SHA-256 values and modification dates unchanged.
-   Private CAD fixtures are not included in this repository or package.
-4. Both device and simulator applications were successfully relinked solely
-   from the supplied application objects, resources and LGPL libraries.
-5. A wrapper source was independently modified to print a unique build 17
-   marker in shadedMesh, rebuilt, and relinked with the final application
-   objects. Loading a generated STEP model emitted the marker at runtime,
-   and the model rendered. The published library objects and sources were
-   restored to their original release contents before sealing.
-6. The package audit verifies hashes and excludes application source code,
-   private CAD fixtures and publisher signing credentials. Application objects
-   are stripped of DWARF and embedded LLVM sections before publication.
+1. The signed Release iOS archive and arm64 Simulator application built
+   successfully. The archive passed strict codesign verification; both
+   executable hashes are recorded in BuildIdentity.json.
+2. All 41 selected application tests passed with no failures. Coverage
+   includes cutter metadata and units, D/H offset handling, exact XY arc
+   extrema, trajectory bounds, feed rewriting, and STEP/IGES/BREP imports.
+3. Expanded and collapsed G-code information layouts were visually checked
+   on iPhone and iPad Simulator. The proprietary SLDPRT reader is unchanged
+   from build 17, whose read-only corpus audit opened 65 of 65 parts without
+   changing source hashes or modification dates. Private inputs are absent.
+4. Device and Simulator applications were relinked from the supplied
+   application objects and LGPL libraries using the public relinking tool.
+5. OCCTSwiftIO was independently modified to emit a unique build 18 marker,
+   rebuilt from source and relinked with the new application objects. Opening
+   a STEP sample emitted the marker and rendered the model. Original release
+   library objects and unmodified sources were restored before sealing.
+6. The archive audit verified checksums and excluded application source,
+   private CAD fixtures, publisher signatures and signing credentials.
+   Application objects contain no DWARF or embedded LLVM debug sections.
 
-Device relinking was verified with an ad-hoc signature for inspection.
-Physical-device installation using a recipient's credentials and runtime
-behavior on Apple Silicon Macs have not been verified by this procedure.
+Device relinking uses an ad-hoc signature for inspection; installation of a
+recipient's modified app requires their own Apple signing credentials.
+Runtime compatibility on Apple Silicon Macs is not asserted by these checks.
+
+ZIP SHA-256:
+b3b2efcbb44479b676bf9f5489d20c8051ea97c9715993e30cfd194e1bfd2f66
