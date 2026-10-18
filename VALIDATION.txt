@@ -1,22 +1,29 @@
-GCodeReader CNC 1.0.1 (16) — validation performed on 2026-10-17
+GCodeReader CNC 1.0.1 (17) — validation completed on 2026-10-18
 
-Xcode 27.0 (27A266a), iOS 27 SDK, arm64, deployment target iOS 26.0.
+Release artifacts: Xcode 27.0 (27A266a), iOS 27 SDK, arm64,
+deployment target iOS 26.0. The dependency revisions and library sources
+are unchanged from build 16; this package contains the matching build 17
+application objects and resources.
 
-1. OCCT 8.0.0 was rebuilt for device and simulator from the supplied pinned
-   source with the documented patch and configuration.
-2. The Release iOS archive and Release Simulator application built successfully.
-   The signed archive passed codesign verification.
-3. STEP, IGES and BREP import tests passed: 3 tests, zero failures. Each test
-   checks a generated 10 x 20 x 30 mm solid, nonempty geometry and bounds.
+1. The signed Release iOS archive and Release Simulator application built
+   successfully. The archive passed strict codesign verification, and its
+   executable SHA-256 matches BuildIdentity.json in this package.
+2. STEP, IGES and BREP import tests passed after the reader fixes: 3 tests,
+   zero failures. Each checks a generated 10 x 20 x 30 mm solid, nonempty
+   geometry and bounds. The later compact toolbar layout was checked visually
+   in the final Release iPhone application; the iPad layout was also checked.
+3. Reader regression checks executed 57 tests with five documented fixture
+   skips and zero failures. A separate read-only SLDPRT corpus check opened
+   65 of 65 files with source SHA-256 values and modification dates unchanged.
+   Private CAD fixtures are not included in this repository or package.
 4. Both device and simulator applications were successfully relinked solely
    from the supplied application objects, resources and LGPL libraries.
-5. The Simulator application was installed and launched after relinking.
-6. The supplied wrapper source was modified to print a marker in shadedMesh,
-   independently rebuilt, and relinked with the application objects. Loading
-   the STEP fixture emitted the marker at runtime. The published source and
-   library objects were then restored to their original release contents.
-7. The filtered OCCT source package configured successfully for both SDKs.
-8. The package audit verifies hashes and excludes application source code,
+5. A wrapper source was independently modified to print a unique build 17
+   marker in shadedMesh, rebuilt, and relinked with the final application
+   objects. Loading a generated STEP model emitted the marker at runtime,
+   and the model rendered. The published library objects and sources were
+   restored to their original release contents before sealing.
+6. The package audit verifies hashes and excludes application source code,
    private CAD fixtures and publisher signing credentials. Application objects
    are stripped of DWARF and embedded LLVM sections before publication.
 
